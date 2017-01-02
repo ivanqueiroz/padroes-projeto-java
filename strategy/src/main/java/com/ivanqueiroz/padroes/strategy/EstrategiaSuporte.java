@@ -9,7 +9,11 @@ public class EstrategiaSuporte implements EstrategiaAgente {
 
     @Override
     public void executar() {
+        combaterComoSuporte();
+    }
+    
+    public static void combaterComoSuporte(){
         LOGGER.info("Esperar feridos e ajudar.");
     }
-
+    
 }

@@ -9,6 +9,10 @@ public class EstrategiaEngenharia implements EstrategiaAgente {
 
     @Override
     public void executar() {
+        combaterComoEngenheiro();
+    }
+    
+    public static void combaterComoEngenheiro(){
         LOGGER.info("Armar torreta, jogar granadas de efeito e plantar minas.");
     }
 

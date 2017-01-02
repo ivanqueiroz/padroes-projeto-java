@@ -13,7 +13,11 @@ public class EstrategiaLinhaDeFrente implements EstrategiaAgente{
     
     @Override
     public void executar() {
-        LOGGER.info("Segurar escudo e invadir.");
+        combaterComoLinhaDeFrente();
+    }
+    
+    public static void combaterComoLinhaDeFrente(){
+         LOGGER.info("Segurar escudo e invadir.");
     }
     
 }

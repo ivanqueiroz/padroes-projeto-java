@@ -11,18 +11,6 @@ public class Aplicacao {
 
     final static Logger LOGGER = LoggerFactory.getLogger(Aplicacao.class);
     
-    public static void combaterComoLinhaDeFrente(){
-         LOGGER.info("Segurar escudo e invadir.");
-    }
-    
-    public static void combaterComoEngenheiro(){
-        LOGGER.info("Armar torreta, jogar granadas de efeito e plantar minas.");
-    }
-    
-    public static void combaterComoSuporte(){
-        LOGGER.info("Esperar feridos e ajudar.");
-    }
-
     public static void main(String[] args) {
 
         LOGGER.info("Inimigos localizados dentro do forte!");
@@ -52,15 +40,15 @@ public class Aplicacao {
         
         LOGGER.info("Java 8 Method References");
         LOGGER.info("Inimigos localizados dentro do forte!");
-        agente.mudarEstrategia(Aplicacao::combaterComoLinhaDeFrente);
+        agente.mudarEstrategia(EstrategiaLinhaDeFrente::combaterComoLinhaDeFrente);
         agente.combater();
         
         LOGGER.info("Inimigos efetuando disparos!");
-        agente.mudarEstrategia(Aplicacao::combaterComoEngenheiro);
+        agente.mudarEstrategia(EstrategiaEngenharia::combaterComoEngenheiro);
         agente.combater();
         
         LOGGER.info("Equipe sendo alvejada!");
-        agente.mudarEstrategia(Aplicacao::combaterComoSuporte);
+        agente.mudarEstrategia(EstrategiaSuporte::combaterComoSuporte);
         agente.combater();
         
     }

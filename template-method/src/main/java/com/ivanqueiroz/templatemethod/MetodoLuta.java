@@ -22,7 +22,7 @@ public abstract class MetodoLuta {
 
     protected abstract void atirarMagiaOponente(String oponente);
 
-    public void finalizar() {
+    public final void finalizar() {
 
         String oponente = desafiarOponente();
         LOGGER.info("Lutador desafiado: {}.", oponente);

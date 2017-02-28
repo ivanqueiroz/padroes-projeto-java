@@ -13,7 +13,7 @@ public class Soldado {
     private final ArmaSecundaria armaSecundaria;
     private final Colete colete;
 
-    public Soldado(Builder builder) {
+    private Soldado(Builder builder) {
         this.aparelho = builder.aparelho;
         this.nome = builder.nome;
         this.especialidade = builder.especialidade;

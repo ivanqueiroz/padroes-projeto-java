@@ -1,9 +1,12 @@
 package com.ivanqueiroz.padroes.builder;
 
+import lombok.Getter;
+
 /**
  *
  * @author ivanqueiroz
  */
+@Getter
 public class Soldado {
 
     private final Aparelhos aparelho;
@@ -22,30 +25,6 @@ public class Soldado {
         this.colete = builder.colete;
     }
 
-    public Aparelhos getAparelho() {
-        return aparelho;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public Especialidade getEspecialidade() {
-        return especialidade;
-    }
-
-    public ArmaPrimaria getArmaPrimaria() {
-        return armaPrimaria;
-    }
-
-    public ArmaSecundaria getArmaSecundaria() {
-        return armaSecundaria;
-    }
-
-    public Colete getColete() {
-        return colete;
-    }
-
     @Override
     public String toString() {
 
@@ -56,12 +35,12 @@ public class Soldado {
                 .append(nome);
 
         if (armaPrimaria != null) {
-            sb.append("utilizando ");
+            sb.append(" utilizando ");
             sb.append(armaPrimaria).append(" como arma principal ");
         }
 
         if (armaSecundaria != null) {
-            sb.append("de reserva uma ").append(armaSecundaria);
+            sb.append(" de reserva uma ").append(armaSecundaria);
         }
         
         if (colete != null) {

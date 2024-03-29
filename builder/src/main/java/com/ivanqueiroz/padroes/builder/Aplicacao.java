@@ -1,15 +1,12 @@
 package com.ivanqueiroz.padroes.builder;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 /**
- *
  * @author ivanqueiroz
  */
+@Slf4j
 public class Aplicacao {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(Aplicacao.class);
 
     public static void main(String[] args) {
         Soldado assalto = new Soldado.Builder(Especialidade.ASSALTO, "Cpt Nascimento")
@@ -17,20 +14,20 @@ public class Aplicacao {
                 .comArmaSecundaria(ArmaSecundaria.PISTOLA)
                 .comColete(Colete.CERAMICO)
                 .build();
-        LOGGER.info(assalto.toString());
+        log.info("Soldado {}", assalto);
 
         Soldado suporte = new Soldado.Builder(Especialidade.SUPORTE, "Rambo")
                 .comArmaPrimaria(ArmaPrimaria.METRALHADORA)
                 .comAparelho(Aparelhos.C4)
                 .build();
-        LOGGER.info(suporte.toString());
+        log.info("Suporte {}", suporte);
 
         Soldado engenheiro = new Soldado.Builder(Especialidade.ENGENHEIRO, "Jack Bauer")
                 .comAparelho(Aparelhos.SMOKE)
                 .comArmaSecundaria(ArmaSecundaria.PISTOLA)
                 .comColete(Colete.KEVLAR)
                 .build();
-        LOGGER.info(engenheiro.toString());
+        log.info("Engenheiro {}", engenheiro);
 
         Soldado batedor = new Soldado.Builder(Especialidade.BATEDOR, "Chris Kyle")
                 .comArmaPrimaria(ArmaPrimaria.RIFLE)
@@ -38,7 +35,7 @@ public class Aplicacao {
                 .comColete(Colete.ALUMINIO)
                 .comAparelho(Aparelhos.SMOKE)
                 .build();
-        LOGGER.info(batedor.toString());
+        log.info("Batedor {}", batedor);
     }
 
 }
